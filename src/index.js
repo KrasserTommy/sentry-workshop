@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { CustomErrorBoundary } from "./CustomErrorBoundary";
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";
 
@@ -13,9 +12,7 @@ import { Integrations } from "@sentry/tracing";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CustomErrorBoundary>
-      <App />
-    </CustomErrorBoundary>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
