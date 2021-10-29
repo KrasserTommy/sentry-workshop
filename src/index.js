@@ -6,8 +6,8 @@ import { Integrations } from "@sentry/tracing";
 
 // Sentry.init({
 //   dsn: process.env.REACT_APP_SENTRY_DSN,
-//   integrations: [new Integrations.BrowserTracing()],
 //   release: "0.1.0",
+//   debug: true,
 // });
 
 ReactDOM.render(
