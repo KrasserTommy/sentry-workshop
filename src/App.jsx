@@ -8,16 +8,6 @@ const InputWithError = ({ username }) => {
   return `Hi ${username}`;
 };
 
-const ErrorFallback = ({ error, resetErrorBoundary }) => {
-  return (
-    <div role="alert">
-      <p>Es ist ein Fehler aufgetreten</p>
-      <p style={{ color: "red" }}>{error.message}</p>
-      <button onClick={resetErrorBoundary}>Nochmal versuchen</button>
-    </div>
-  );
-};
-
 const App = () => {
   const [username, setUsername] = React.useState("");
 
@@ -32,17 +22,10 @@ const App = () => {
         />
       </label>
       <div>
-        {/* <ErrorBoundary
-          FallbackComponent={ErrorFallback}
-          onReset={() => {
-            setUsername("");
-          }}
-          resetKeys={[username]}
-        > */}
         <InputWithError username={username} />
-        {/* </ErrorBoundary> */}
       </div>
     </div>
   );
 };
+
 export default App;
